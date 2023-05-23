@@ -195,29 +195,6 @@ a:hover, a:active {
 }
 
 
-/* Cards - Skills */
-
-.cards.skills {
-    width: 70%;
-}
-
-.cards.skills .card {
-    min-width: 200px;
-    width: 240px;
-    height: 240px;
-}
-
-.cards.skills {
-    transition: filter .5s ease-in-out;
-    -webkit-filter: grayscale(0%); 
-    filter: grayscale(0%); 
-  }
-  
-  .cards.skills .card:hover .logo {
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%); 
-  }
-
 /* Cards - Services */ 
 
 .cards.services {
@@ -225,7 +202,7 @@ a:hover, a:active {
 }
 
 .cards.services .card {
-    min-width: 240px;
+    min-width: 320px;
     width: 320px;
     height: 500px;
     position: relative;
@@ -617,17 +594,66 @@ transition: 50ms;
 ****** Responsive
 ******/
 
+@media(min-width:1301px) {
+    #intro {
+        height: 110vh;
+    }
+
+    .navbar a {
+        font-size: x-large;
+    }
+
+    .navbar h1 {
+        font-size: 47px;
+    }
+
+    .text-intro h2 {
+        font-size: 3em;
+    }
+
+    .text-intro h3 {
+        font-size: 2em;
+    }
+
+    .topbar a {
+        font-size: larger;
+    }
+
+    .cards.services .card {
+        width: 445px;
+        height: 640px;
+        font-size: 20px;
+    }
+
+    .cards.services p {
+        top: 58%;
+    }
+
+    #contact li {
+        font-size: 25px;
+    }
+
+    .footer .social-icon {
+        font-size: 2.2em;
+        padding: 11px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
 
 /* Extra large devices (large desktops, 1200px and up) */ 
 
-@media(max-width:1200px) {
-    .header {
-        display: none;
-    }
-
+@media(max-width:1300px) {
     .container {
         flex-wrap: wrap;
         text-align: center;
+    }
+
+    .text-intro {
+        top: 190px;
     }
 
     .col-50 {
@@ -641,24 +667,123 @@ transition: 50ms;
     #contact .col-50 {
         text-align: left;
     }
+
+    #intro {
+        height: 100vh;
+    }
+
+    #map {
+        width: 100%;
+    }
+
 }
 
 
 /* Large devices (desktops, 992px and up) */
 
 @media(max-width:992px) { 
+    .header {
+        display: none;
+    }
+
     .box {
         flex-wrap: wrap;
     } 
+
+    .container {
+        margin: auto;
+    }
+
+    .cards.services {
+        width: 95%;
+    }
+    
+    .img-wrapper {
+        width: 80%; 
+     }
+ 
+     .text-intro {
+         width: 80%;
+         z-index: 2;
+         top: 190px;
+     }
+ 
+     .text-intro h2 {
+         font-size: 2.5em;
+     }
+
+     .text-intro h3 {
+        font-size: 2em;
+    }
+ 
+     #intro li {
+         font-size: 12px;
+         margin-top: 80px;
+         } 
+ 
+     .float {
+         right: 90px;
+         bottom: 65px;
+     }
+ 
+     #form-section .box {
+         margin: 0; 
+     }
+ 
+     #map {
+         width: 100%;
+         margin: 0;
+     }
 }
 
 
 /* Medium devices (tablets, 768px and up) */
 
 @media(max-width:768px) {
+
+    .container {
+        margin: auto;
+    }
+
     .name-wrapper {
         display: block;
     }
+
+    .cards.services {
+        width: 100%;
+    }
+
+    .img-wrapper {
+        width: 80%; 
+     }
+ 
+     .text-intro {
+         width: 80%;
+         z-index: 2;
+         top: 122px;
+     }
+ 
+     .text-intro h2 {
+         font-size: 1.5em;
+     }
+ 
+     #intro li {
+         font-size: 12px;
+         } 
+ 
+     .float {
+         right: 90px;
+         bottom: 65px;
+     }
+ 
+     #form-section .box {
+         margin: 0; 
+     }
+ 
+     #map {
+         width: 100%;
+         margin: 0;
+     }
 }
 
 /* Mobile (to 576px) */
@@ -672,10 +797,6 @@ transition: 50ms;
         justify-content: start;
     }
 
-    #contact .container {
-        margin: 0;
-    }
-
     #contact li {
         margin-left: -60px;
         white-space: nowrap;
@@ -686,5 +807,38 @@ transition: 50ms;
         font-size: 12px;
         padding: 5px 5px;
     }
+
+    .img-wrapper {
+       width: 80%; 
+    }
+
+    .text-intro {
+        width: 80%;
+        z-index: 2;
+        top: 122px;
+    }
+
+    .text-intro h2 {
+        font-size: 1.5em;
+    }
+
+    #intro li {
+        font-size: 12px;
+        } 
+
+    .float {
+        right: 66px;
+        bottom: 75px;
+    }
+
+    #form-section .box {
+        margin: 0; 
+    }
+
+    #map {
+        width: 100%;
+        margin: 0;
+    }
+  
 }
 
