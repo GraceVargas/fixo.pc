@@ -326,9 +326,6 @@ text-align: center;
     justify-content: center;
   }
   
-  .responsive_menu ul li {
-    margin: 0 20px;
-  }
   
   .responsive_menu ul li a {
     color: #fff;
@@ -640,6 +637,7 @@ transition: 50ms;
 /*****
 ****** Responsive
 ******/
+
 @media(min-width:1500px) {
     .navbar a {
         font-size: x-large;
@@ -792,7 +790,7 @@ transition: 50ms;
          } 
 
     #intro ul {
-        width: 66%;
+        width: 80%;
     }     
         
 
@@ -865,9 +863,8 @@ transition: 50ms;
          margin: 0; 
      }
  
-     #map {
-         width: 100%;
-         margin: 0;
+     #maps_iframe {
+        width: 100%;
      }
 }
 
