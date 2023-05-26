@@ -275,7 +275,7 @@ text-align: center;
 
 .header {
     position: sticky;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     box-shadow: 0px 0px 14px rgb(235, 230, 230);
 }
@@ -302,6 +302,64 @@ text-align: center;
     font-size: large;
 }
 
+/* Hamburger menu styling */
+.menu-button {
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+    border: none;
+    font-size: 150%;
+  }
+  
+  .responsive_menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+  }
+  
+  .responsive_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .responsive_menu ul li {
+    margin: 0 20px;
+  }
+  
+  .responsive_menu ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+
+    .list-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: inline-block;
+        background-color: ;
+    }
+
+    .responsive_menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+  
+    .responsive_menu.show {
+      display: block;
+    }
+  }
 
 
 /*****
@@ -520,10 +578,10 @@ transition: 50ms;
 .modal {
     display: none;  
     position: fixed; 
-    z-index: 1; 
+    z-index: 999; 
     padding-top: 150px; 
     left: 0;
-    top: 0;
+    top: 25px;
     width: 100%; 
     height: 100%; 
     overflow: auto; 
@@ -554,17 +612,6 @@ transition: 50ms;
     cursor: pointer;
   }
 
-  /*****
-****** Maps
-******/
-
-
-#map {
-    height: 350px; 
-    width: 50%; 
-    margin: 30px;
-    border-radius: 10px;
-  }
 
    /*****
 ****** Wsp
@@ -593,12 +640,7 @@ transition: 50ms;
 /*****
 ****** Responsive
 ******/
-
-@media(min-width:1301px) {
-    #intro {
-        height: 110vh;
-    }
-
+@media(min-width:1500px) {
     .navbar a {
         font-size: x-large;
     }
@@ -611,12 +653,44 @@ transition: 50ms;
         font-size: 3em;
     }
 
+    .footer .social-icon {
+        font-size: 2.2em;
+        padding: 11px;
+    }
+
+    #contact li {
+        font-size: 25px;
+    }
+
+    .topbar a {
+        font-size: larger;
+    }
+
+}
+
+@media(min-width:1201px) {
+    #intro {
+        height: 110vh;
+    }
+
+    .navbar a {
+        font-size: large;
+    }
+
+    .navbar h1 {
+        font-size: 37px;
+    }
+
+    .text-intro h2 {
+        font-size: 2em;
+    }
+
     .text-intro h3 {
         font-size: 2em;
     }
 
     .topbar a {
-        font-size: larger;
+        font-size: medium;
     }
 
     .cards.services .card {
@@ -630,11 +704,11 @@ transition: 50ms;
     }
 
     #contact li {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .footer .social-icon {
-        font-size: 2.2em;
+        font-size: 1.5em;
         padding: 11px;
     }
 
@@ -646,14 +720,14 @@ transition: 50ms;
 
 /* Extra large devices (large desktops, 1200px and up) */ 
 
-@media(max-width:1300px) {
+@media(max-width:1200px) {
     .container {
         flex-wrap: wrap;
         text-align: center;
     }
 
     .text-intro {
-        top: 190px;
+        top: 60px;
     }
 
     .col-50 {
@@ -681,11 +755,7 @@ transition: 50ms;
 
 /* Large devices (desktops, 992px and up) */
 
-@media(max-width:992px) { 
-    .header {
-        display: none;
-    }
-
+@media(max-width:990px) { 
     .box {
         flex-wrap: wrap;
     } 
@@ -705,21 +775,32 @@ transition: 50ms;
      .text-intro {
          width: 80%;
          z-index: 2;
-         top: 190px;
+         top: 150px;
      }
  
      .text-intro h2 {
-         font-size: 2.5em;
+         font-size: 1.5em;
      }
 
      .text-intro h3 {
-        font-size: 2em;
+        font-size: 1em;
     }
  
      #intro li {
          font-size: 12px;
          margin-top: 80px;
          } 
+
+    #intro ul {
+        width: 66%;
+    }     
+        
+
+    #intro .icon {
+        width: 27%;
+    }    
+
+    
  
      .float {
          right: 90px;
@@ -740,6 +821,10 @@ transition: 50ms;
 /* Medium devices (tablets, 768px and up) */
 
 @media(max-width:768px) {
+
+    .topbar {
+        display: none;
+    }
 
     .container {
         margin: auto;
@@ -789,8 +874,9 @@ transition: 50ms;
 /* Mobile (to 576px) */
 
 @media(max-width:576px) {
+
     .title-section {
-        font-size: 2.3rem;
+        font-size: x-large;
     }
 
     #contact .title-section {

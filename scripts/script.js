@@ -41,3 +41,14 @@ function initMap() {
   window.initMap = initMap;
 
 
+  /* Toggle Menu Button */
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById("toggle-button");
+    const menu = document.querySelector(".responsive_menu");
+  
+    menuButton.addEventListener("click", function() {
+      menu.classList.toggle("show");
+    });
+  });
+
