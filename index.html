@@ -31,10 +31,18 @@
             <ul class="list list-nav disp-flex center bg-color-new">
 
                 <li><a class="btn" href="#services">Servicios</a></li> 
-                <!-- <li><a class="btn" href="#intro">Preguntas Frecuentes</a></li> -->
                 <li><a class="btn" href="#form-section">Consultas</a></li>
                 <li><a class="btn" href="#contact">Contacto</a></li>
             </ul>
+
+            <button class="menu-button bg-color-new" id="toggle-button">&#9776;</button>
+            <div class="responsive_menu">
+                <ul>
+                    <li><a class="btn" href="#services">Servicios</a></li> 
+                    <li><a class="btn" href="#form-section">Consultas</a></li>
+                    <li><a class="btn" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -129,7 +137,7 @@
             <div class="container">
                 <div class="box">
                     <h2 class="title-section">Envianos tu consulta</h2>
-                    <form action="https://formsubmit.co/fixoelectronica@gmail.com" method="POST"  onsubmit="modalOn()">
+                    <form action="https://formsubmit.co/e07473c8511dc43caf8d77da8b9f332c method="POST"  onsubmit="modalOn()">
 
                         <div class="name-wrapper">
                             <div class="name-wrapper-item">
@@ -149,6 +157,7 @@
                         <button type="submit" class="btn btn-pr" id="submitForm">Enviar</button>
                         <input type="hidden" name="_next" value="https://gracevargas.github.io/portfolio/"> <!--cambiar link-->
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse" value="Muchas gracias por tu consulta. A la brevedad te estaremos respondiendo. FIXO">
                         <input type="text" name="_honey" style="display:none">
                     </form>   
                 </div> 
@@ -160,7 +169,7 @@
         <section id="contact" class="bg-color-light">
             <div class="container">
                 <div class="box disp-flex">
-                    <div id="map"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2309586805895!2d-58.491281425004466!3d-34.59832085721187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb787e2b9ed23%3A0xfb196092546ee7bd!2sFIXO%20COMPUTACION!5e0!3m2!1ses!2sar!4v1685130921913!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="col-50">
                         <h2 class="title-section">Contactanos</h2>
                         <ul class="list">
