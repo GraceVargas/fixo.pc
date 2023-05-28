@@ -18,6 +18,10 @@ body {
     font-size: 16px;
 }
 
+main {
+    margin-top: 90px;
+}
+
 a {
     text-decoration: none;
     color: #3C4048;
@@ -26,6 +30,10 @@ a {
 a:hover, a:active {
     text-decoration: none;
     color: #00ABB3;
+}
+
+.eapps-widget-toolbar {
+    display: none !important;
 }
 
 
@@ -274,9 +282,11 @@ text-align: center;
 ******/
 
 .header {
-    position: sticky;
-    z-index: 3;
+    position: fixed;
+    z-index: 999;
     top: 0;
+    left: 0;
+    right: 0;
     box-shadow: 0px 0px 14px rgb(235, 230, 230);
 }
 
@@ -301,15 +311,6 @@ text-align: center;
     color: #FFF;
     font-size: large;
 }
-
-/* Hamburger menu styling */
-.menu-button {
-    cursor: pointer;
-    padding: 10px;
-    display: none;
-    border: none;
-    font-size: 150%;
-  }
   
   .responsive_menu {
     display: none;
@@ -339,23 +340,15 @@ text-align: center;
         display: none;
     }
 
-    .menu-button {
-        display: inline-block;
-        background-color: ;
-    }
-
     .responsive_menu {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       height: auto;
-      display: none;
-    }
-  
-    .responsive_menu.show {
       display: block;
     }
+  
   }
 
 
@@ -372,16 +365,17 @@ text-align: center;
     line-height: 1.4;
 }
 
-#intro li {
-font-weight: 600;
-margin-top: 40px;
-color: #F2F2F2;
-}
-
 #intro .icon {
     filter: invert(1) hue-rotate(180deg);
     width: 30%;
     margin-bottom: 5px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-left: 5px;
+}
+
+#intro .icon img {
+    width: inherit;
 }
 
 .text-intro {
@@ -567,6 +561,10 @@ transition: 50ms;
     font-size: 11px;
 }
 
+.signature {
+    font-size: 10px;
+}
+
 
 /*****
 ******  Modal
@@ -575,7 +573,7 @@ transition: 50ms;
 .modal {
     display: none;  
     position: fixed; 
-    z-index: 999; 
+    z-index: 4; 
     padding-top: 150px; 
     left: 0;
     top: 25px;
@@ -618,15 +616,15 @@ transition: 50ms;
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:5%;
+	right:5%;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-  font-size:30px;
+    font-size:30px;
 	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+    z-index:3;
 }
 
 .my-float{
@@ -800,10 +798,10 @@ transition: 50ms;
 
     
  
-     .float {
+     /* .float {
          right: 90px;
          bottom: 65px;
-     }
+     } */
  
      #form-section .box {
          margin: 0; 
@@ -822,6 +820,10 @@ transition: 50ms;
 
     .topbar {
         display: none;
+    }
+
+    .navbar a {
+        font-size: initial;
     }
 
     .container {
@@ -854,10 +856,10 @@ transition: 50ms;
          font-size: 12px;
          } 
  
-     .float {
+     /* .float {
          right: 90px;
          bottom: 65px;
-     }
+     } */
  
      #form-section .box {
          margin: 0; 
@@ -872,8 +874,16 @@ transition: 50ms;
 
 @media(max-width:576px) {
 
+    .container {
+        max-width: calc(100% - 50px);
+    }
+
     .title-section {
         font-size: x-large;
+    }
+
+    #intro ul {
+        width: 100%;
     }
 
     #contact .title-section {
@@ -909,10 +919,10 @@ transition: 50ms;
         font-size: 12px;
         } 
 
-    .float {
-        right: 66px;
+    /* .float {
+        right: 90px;
         bottom: 75px;
-    }
+    } */
 
     #form-section .box {
         margin: 0; 
