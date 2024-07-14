@@ -47,8 +47,36 @@ function initMap() {
     const menuButton = document.getElementById("toggle-button");
     const menu = document.querySelector(".responsive_menu");
   
-    menuButton.addEventListener("click", function() {
+    menuButton && menuButton.addEventListener("click", function() {
       menu.classList.toggle("show");
     });
   });
+
+
+   // Función para verificar si el contenedor de Elfsight está vacío
+  const isElfsightContainerEmpty = () => {
+    const elfsightContainer = document.getElementsByClassName("elfsight-app-f346b858-a953-4854-bff9-ab0ce2d96ff0")[0];
+    return elfsightContainer && elfsightContainer.children.length === 0;
+  }
+
+// Función para mostrar el widget correspondiente
+const showAppropriateWidget = () => {
+    if (isElfsightContainerEmpty()) {
+        const trustmaryContainer = document.getElementById("trustmaryContainer");
+        const script = document.createElement('script');
+        script.setAttribute('id', 'trustmaryScript');
+        script.src = 'https://widget.trustmary.com/ptk7LlKGR';
+        script.async = true;
+        trustmaryContainer.appendChild(script)
+    } else {
+      const trustmaryScript = document.getElementById("trustmaryScript");
+      trustmaryScript && trustmaryScript.remove();
+    }
+}
+
+
+// Ejecutar la función al cargar la página y verificar periódicamente
+window.onload = () => {
+  setInterval(showAppropriateWidget(), 500000); 
+};
 
